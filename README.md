@@ -18,7 +18,7 @@ I want to inform people about Asian theology using the rich collection from the 
 
 <a name="Features"></a>
 ## Features
-- [ ] Search for asian deties per region
+- [ ] Search for asian deities per region
 
 <a name="Data"></a>
 ## Data
