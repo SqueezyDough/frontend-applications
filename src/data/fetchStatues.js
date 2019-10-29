@@ -13,7 +13,6 @@ export default function() {
   WHERE {
     <https://hdl.handle.net/20.500.11840/termmaster8401> skos:narrower* ?place .
     ?place skos:prefLabel ?placeName .
-
     VALUES ?type {"Godenbeeld" "godenbeeld"}
     ?result dc:title ?title ;
             dc:type ?type ;
