@@ -25,7 +25,7 @@ I'm getting data from the database of the Dutch national Museum of World Culture
 * Martijn - we were both figuring out how to create seperate modules in Svelte
 
 ## Installation
-Clone repository
+`git clone https://github.com/SqueezyDough/frontend-applications.git`
 
 ## Install packages
 `npm install`
