@@ -1,19 +1,12 @@
 <script>
-    import {onMount} from 'svelte';
-    import results from './src/data/fetchStatues.js';
-    import Statue from './src/components/statue.svelte'
-
-    let data = [];
-
-    onMount( async () => {
-        data = await results()
-    })
+    import Card from '../components/card.svelte'
+    export let results;
 </script>
 
 <ul>
-    {#each data as Statue}
+    {#each results as data}
         <li>
-            <Statue {Statue}/>
+            <Card {data}/>
         </li>
 
         {:else}

@@ -2,13 +2,11 @@
   "version": 3,
   "file": "bundle.css",
   "sources": [
-    "../src/App.svelte",
-    "../src/components/statue.svelte"
+    "../src/components/card.svelte"
   ],
   "sourcesContent": [
-    "<script>\n    import results from '../src/data/statues.js';\n    import {onMount} from 'svelte';\n\n    $: data = [];\n\n    onMount( async () => {\n        data = await results()\n    })\n</script>\n\n<style>\nimg {\n    display: block;\n    height: 200px;\n}\n</style>\n\n<ul>\n    {#each data as source}\n        <li>\n            {source.title.value}\n            <img src={source.image.value} alt={source.title.value}>\n        </li>\n    {/each}\n</ul>",
-    "<script>\n    export let Statue;\n</script>\n\n<style>\nimg {\n    display: block;\n    height: 200px;\n}\n</style>\n\n{Statue.title.value}\n<img src={Statue.image.value} alt={Statue.title.value}>\n"
+    "<script>\n    export let data;\n</script>\n\n<style>\nimg {\n    display: block;\n    height: 200px;\n}\n</style>\n\n{data.title.value}\n<img src={data.image.value} alt={data.title.value}>\n"
   ],
   "names": [],
-  "mappings": "AAYA,GAAG,cAAC,CAAC,AACD,OAAO,CAAE,KAAK,CACd,MAAM,CAAE,KAAK,AACjB,CAAC;ACVD,GAAG,cAAC,CAAC,AACD,OAAO,CAAE,KAAK,CACd,MAAM,CAAE,KAAK,AACjB,CAAC"
+  "mappings": "AAKA,GAAG,cAAC,CAAC,AACD,OAAO,CAAE,KAAK,CACd,MAAM,CAAE,KAAK,AACjB,CAAC"
 }
