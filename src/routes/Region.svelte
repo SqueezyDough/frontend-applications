@@ -10,7 +10,9 @@
     })
 </script>
 
-<style>
+<style lang="scss">
+    @import "../sass/global.scss";
+
     ul {
         display: flex;
         list-style-type: none;
@@ -18,7 +20,7 @@
     }
 
     li {
-        border: 1px solid red;
+        border: 1px solid $red;
     }
 </style>
 
