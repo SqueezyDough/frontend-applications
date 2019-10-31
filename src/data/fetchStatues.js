@@ -20,14 +20,14 @@ export default function() {
               edm:isShownBy ?image
   }
   ORDER BY ?result
-  LIMIT 30
+  LIMIT 50
   `
 
 function runQuery(url, query){
       return fetch(url+"?query="+ encodeURIComponent(query) +"&format=json")
         .then(res => res.json())
         .then(json => {
-            return json.results.bindings
+          return json.results.bindings;
       })
     }
 

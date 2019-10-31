@@ -2,12 +2,25 @@
     export let data;
 </script>
 
-<style>
-img {
-    display: block;
-    height: 200px;
-}
+<style lang="scss">
+    @import "../sass/global.scss";
+
+    .card {
+        padding: 1rem;
+    }
+
+    .card__image {
+        display: block;
+        height: 200px;
+    }
+
+    .card__title {
+        font-family: $primaryFontFamily;
+        font-size: 1rem;
+    }
 </style>
 
-{data.title.value}
-<img src={data.image.value} alt={data.title.value}>
+<div class="card">
+    <img class="card__image" src={data.image.value} alt={data.title.value}>
+    <h1 class="card__title">{data.title.value}</h1>
+</div>
