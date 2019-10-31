@@ -1,24 +1,35 @@
 <script>
-    import Card from '../components/Card.svelte'
+    import Button from '../components/Button.svelte'
+
     export let results;
+
+    // create new (simple) objects from results
+    $: objects = results.map( item => {
+        let region = {
+            uri : item.place.value.split('/').pop(),
+            name : item.placeName.value
+        }
+
+        return region;
+    });
+
+    // https://ilikekillnerds.com/2016/05/removing-duplicate-objects-array-property-name-javascript/
+    function removeDuplicates(array, prop) {
+        return array.filter((obj, pos, arr) => {
+            return arr.map(mapObj => mapObj[prop]).indexOf(obj[prop]) === pos;
+        });
+    }
+
+    $: regions = removeDuplicates(objects, "uri")
 </script>
 
 <style>
-    ul {
-        display: flex;
-        list-style-type: none;
-        padding: 0;
-    }
-
-    li {
-        border: 1px solid red;
-    }
 </style>
 
 <ul>
-    {#each results as data}
+    {#each regions as data}
         <li>
-            <Card {data}/>
+            <Button {data}/>
         </li>
 
         {:else}

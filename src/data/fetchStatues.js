@@ -9,18 +9,19 @@ export default function() {
   PREFIX edm: <http://www.europeana.eu/schemas/edm/>
   PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 
-  SELECT ?result ?title ?place ?type ?image
+  SELECT distinct ?result ?title ?place ?placeName ?type ?image
   WHERE {
     <https://hdl.handle.net/20.500.11840/termmaster8401> skos:narrower* ?place .
     ?place skos:prefLabel ?placeName .
+
     VALUES ?type {"Godenbeeld" "godenbeeld"}
     ?result dc:title ?title ;
-            dc:type ?type ;
+          dc:type ?type ;
             dct:spatial ?place ;
-              edm:isShownBy ?image
+          edm:isShownBy ?image
   }
   ORDER BY ?result
-  LIMIT 50
+  LIMIT 200
   `
 
 function runQuery(url, query){
