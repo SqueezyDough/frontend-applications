@@ -22,14 +22,21 @@ I want to inform people about Asian theology using the rich collection from the 
 
 <a name="Data"></a>
 ## Data
-I'm getting data from the database of the Dutch national Museum of World Cultures. I'm collecting Asian gods statues specifically.
+I'm getting data from the database of the Dutch national Museum of World Cultures. I'm collecting Asian gods statues specifically. Here's everything: 
+
+* Title
+* Place (Southeast Asia only)
+* Place name
+* type (Godenbeeld)
+* image
 
 <a name="Refactors"></a>
 ## Refactors
 - [X] Pass data to a seperate module
 - [X] Create seperate module for data query
-- [ ] Refactor code for component lifecycle
-- [ ] Fetch data on app instance
+- [X] Refactor code for component lifecycle
+- [X] Fetch data on app instance
+- [X] Repurpose Homepage
 - [ ] Replace rollup with webpack
 
 <a name="Honourable-Mentions"></a>
@@ -54,4 +61,4 @@ I'm getting data from the database of the Dutch national Museum of World Culture
 
 <a name="License"></a>
 ## License 
-MIT
+[MIT](https://github.com/SqueezyDough/frontend-applications/blob/master/LICENSE) @ SqueezyDough
