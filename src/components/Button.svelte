@@ -3,8 +3,9 @@
 </script>
 
 <style lang="scss">
+    @import "../sass/global.scss";
 </style>
 
-<a href="/region/{data.uri}">
+<a class="btn--primary" href="/region/{data.uri}">
     {data.name}
 </a>

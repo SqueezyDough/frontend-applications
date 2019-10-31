@@ -28,6 +28,9 @@
   })
 </script>
 
+<style lang="scss" global>
+</style>
+
 <Router>
   <div>
     <Route path="/" component="{Home}" {results}/>

@@ -1508,8 +1508,9 @@ var app = (function () {
     		c: function create() {
     			a = element("a");
     			t = text(t_value);
+    			attr_dev(a, "class", "btn--primary svelte-13clyfa");
     			attr_dev(a, "href", a_href_value = "/region/" + ctx.data.uri);
-    			add_location(a, file, 7, 0, 244);
+    			add_location(a, file, 60, 0, 1247);
     		},
 
     		l: function claim(nodes) {
@@ -1599,7 +1600,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (36:8) {:else}
+    // (112:12) {:else}
     function create_else_block$1(ctx) {
     	var t;
 
@@ -1618,11 +1619,11 @@ var app = (function () {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_else_block$1.name, type: "else", source: "(36:8) {:else}", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_else_block$1.name, type: "else", source: "(112:12) {:else}", ctx });
     	return block;
     }
 
-    // (31:4) {#each regions as data}
+    // (107:8) {#each regions as data}
     function create_each_block(ctx) {
     	var li, t, current;
 
@@ -1636,7 +1637,8 @@ var app = (function () {
     			li = element("li");
     			button.$$.fragment.c();
     			t = space();
-    			add_location(li, file$1, 31, 8, 914);
+    			attr_dev(li, "class", "regions__list-item svelte-1rfqacx");
+    			add_location(li, file$1, 107, 12, 2525);
     		},
 
     		m: function mount(target, anchor) {
@@ -1672,12 +1674,12 @@ var app = (function () {
     			destroy_component(button);
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block.name, type: "each", source: "(31:4) {#each regions as data}", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block.name, type: "each", source: "(107:8) {#each regions as data}", ctx });
     	return block;
     }
 
     function create_fragment$3(ctx) {
-    	var ul, current;
+    	var div, h1, t_1, ul, current;
 
     	let each_value = ctx.regions;
 
@@ -1700,12 +1702,21 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
+    			div = element("div");
+    			h1 = element("h1");
+    			h1.textContent = "Asian Deities";
+    			t_1 = space();
     			ul = element("ul");
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
     			}
-    			add_location(ul, file$1, 29, 0, 873);
+    			attr_dev(h1, "class", "main-title svelte-1rfqacx");
+    			add_location(h1, file$1, 103, 4, 2413);
+    			attr_dev(ul, "class", "regions svelte-1rfqacx");
+    			add_location(ul, file$1, 105, 4, 2460);
+    			attr_dev(div, "class", "wrapper svelte-1rfqacx");
+    			add_location(div, file$1, 102, 0, 2387);
     		},
 
     		l: function claim(nodes) {
@@ -1713,7 +1724,10 @@ var app = (function () {
     		},
 
     		m: function mount(target, anchor) {
-    			insert_dev(target, ul, anchor);
+    			insert_dev(target, div, anchor);
+    			append_dev(div, h1);
+    			append_dev(div, t_1);
+    			append_dev(div, ul);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].m(ul, null);
@@ -1784,7 +1798,7 @@ var app = (function () {
 
     		d: function destroy(detaching) {
     			if (detaching) {
-    				detach_dev(ul);
+    				detach_dev(div);
     			}
 
     			destroy_each(each_blocks, detaching);
@@ -1797,10 +1811,10 @@ var app = (function () {
     }
 
     function removeDuplicates(array, prop) {
-        return array.filter((obj, pos, arr) => {
-            return arr.map(mapObj => mapObj[prop]).indexOf(obj[prop]) === pos;
-        });
-    }
+          return array.filter((obj, pos, arr) => {
+              return arr.map(mapObj => mapObj[prop]).indexOf(obj[prop]) === pos;
+          });
+      }
 
     function instance$3($$self, $$props, $$invalidate) {
     	let { results } = $$props;
@@ -1828,13 +1842,13 @@ var app = (function () {
 
     	$$self.$$.update = ($$dirty = { results: 1, objects: 1 }) => {
     		if ($$dirty.results) { $$invalidate('objects', objects = results.map( item => {
-                    let region = {
-                        uri : item.place.value.split('/').pop(),
-                        name : item.placeName.value
-                    };
-            
-                    return region;
-                })); }
+                let region = {
+                    uri : item.place.value.split('/').pop(),
+                    name : item.placeName.value
+                };
+        
+                return region;
+            })); }
     		if ($$dirty.objects) { $$invalidate('regions', regions = removeDuplicates(objects, "uri")); }
     	};
 
@@ -1877,14 +1891,14 @@ var app = (function () {
     			t0 = space();
     			h1 = element("h1");
     			t1 = text(t1_value);
-    			attr_dev(img, "class", "card__image svelte-36b2ds");
+    			attr_dev(img, "class", "card__image svelte-oo58s6");
     			attr_dev(img, "src", img_src_value = ctx.data.image.value);
     			attr_dev(img, "alt", img_alt_value = ctx.data.title.value);
-    			add_location(img, file$2, 48, 4, 854);
-    			attr_dev(h1, "class", "card__title svelte-36b2ds");
-    			add_location(h1, file$2, 49, 4, 930);
-    			attr_dev(div, "class", "card svelte-36b2ds");
-    			add_location(div, file$2, 47, 0, 831);
+    			add_location(img, file$2, 72, 4, 1446);
+    			attr_dev(h1, "class", "card__title svelte-oo58s6");
+    			add_location(h1, file$2, 73, 4, 1522);
+    			attr_dev(div, "class", "card svelte-oo58s6");
+    			add_location(div, file$2, 71, 0, 1423);
     		},
 
     		l: function claim(nodes) {
@@ -1981,7 +1995,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (33:8) {:else}
+    // (84:8) {:else}
     function create_else_block$2(ctx) {
     	var t;
 
@@ -2000,11 +2014,11 @@ var app = (function () {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_else_block$2.name, type: "else", source: "(33:8) {:else}", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_else_block$2.name, type: "else", source: "(84:8) {:else}", ctx });
     	return block;
     }
 
-    // (28:4) {#each resultsByRegion as data}
+    // (79:4) {#each resultsByRegion as data}
     function create_each_block$1(ctx) {
     	var li, t, current;
 
@@ -2018,8 +2032,8 @@ var app = (function () {
     			li = element("li");
     			card.$$.fragment.c();
     			t = space();
-    			attr_dev(li, "class", "svelte-5qe4si");
-    			add_location(li, file$3, 28, 8, 1053);
+    			attr_dev(li, "class", "svelte-1ajv1f");
+    			add_location(li, file$3, 79, 8, 1662);
     		},
 
     		m: function mount(target, anchor) {
@@ -2055,7 +2069,7 @@ var app = (function () {
     			destroy_component(card);
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block$1.name, type: "each", source: "(28:4) {#each resultsByRegion as data}", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block$1.name, type: "each", source: "(79:4) {#each resultsByRegion as data}", ctx });
     	return block;
     }
 
@@ -2088,8 +2102,8 @@ var app = (function () {
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
     			}
-    			attr_dev(ul, "class", "svelte-5qe4si");
-    			add_location(ul, file$3, 26, 0, 1004);
+    			attr_dev(ul, "class", "svelte-1ajv1f");
+    			add_location(ul, file$3, 77, 0, 1613);
     		},
 
     		l: function claim(nodes) {
@@ -2210,8 +2224,8 @@ var app = (function () {
 
     	$$self.$$.update = ($$dirty = { results: 1, url: 1 }) => {
     		if ($$dirty.results || $$dirty.url) { $$invalidate('resultsByRegion', resultsByRegion = results.filter( item => {
-                    return item.place.value === url;
-                })); }
+                return item.place.value === url;
+            })); }
     	};
 
     	return { results, regionUri, resultsByRegion };
@@ -2291,7 +2305,7 @@ var app = (function () {
 
     const file$4 = "src/App.svelte";
 
-    // (34:4) <Route path="/region/:id" let:params>
+    // (37:4) <Route path="/region/:id" let:params>
     function create_default_slot_1(ctx) {
     	var current;
 
@@ -2336,11 +2350,11 @@ var app = (function () {
     			destroy_component(region, detaching);
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_1.name, type: "slot", source: "(34:4) <Route path=\"/region/:id\" let:params>", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_1.name, type: "slot", source: "(37:4) <Route path=\"/region/:id\" let:params>", ctx });
     	return block;
     }
 
-    // (31:0) <Router>
+    // (34:0) <Router>
     function create_default_slot(ctx) {
     	var div, t, current;
 
@@ -2370,7 +2384,7 @@ var app = (function () {
     			route0.$$.fragment.c();
     			t = space();
     			route1.$$.fragment.c();
-    			add_location(div, file$4, 31, 2, 1103);
+    			add_location(div, file$4, 34, 2, 1293);
     		},
 
     		m: function mount(target, anchor) {
@@ -2416,7 +2430,7 @@ var app = (function () {
     			destroy_component(route1);
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot.name, type: "slot", source: "(31:0) <Router>", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot.name, type: "slot", source: "(34:0) <Router>", ctx });
     	return block;
     }
 

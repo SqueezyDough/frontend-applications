@@ -23,17 +23,45 @@
     $: regions = removeDuplicates(objects, "uri")
 </script>
 
-<style>
+<style lang="scss">
+    @import "../sass/global.scss";
+
+    .wrapper {
+        width: 100%;
+        background-image: url("https://i.ytimg.com/vi/xDwJzWyvWzY/maxresdefault.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .regions {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: calc(100vh - 110px);
+        padding: 0;
+        list-style-type: none;
+    }
+
+    .regions__list-item {
+        :not(&:last-of-type) {
+            margin-right: .5rem;
+        }
+    }
 </style>
 
-<ul>
-    {#each regions as data}
-        <li>
-            <Button {data}/>
-        </li>
+<div class="wrapper">
+    <h1 class="main-title">Asian Deities</h1>
 
-        {:else}
+    <ul class="regions">
+        {#each regions as data}
+            <li class="regions__list-item">
+                <Button {data}/>
+            </li>
 
-        Loading...
-    {/each}
-</ul>
+            {:else}
+
+            Loading...
+        {/each}
+    </ul>
+</div>
