@@ -3,6 +3,10 @@ Travelers from non-Asian cultures who travel to Asia often see Gods statues unkn
 
 I want to inform people about Asian theology using the rich collection from the Dutch national Museum of World Cultures. I'm using the Svelte framework to achieve this.
 
+### Homepage with all regions
+![](https://github.com/SqueezyDough/frontend-applications/blob/master/wiki/home.jpg?)
+
+### Details page (Not yet implementen)
 ![](https://github.com/SqueezyDough/frontend-applications/blob/master/wiki/proto.png?)
 
 ## Table of contents
