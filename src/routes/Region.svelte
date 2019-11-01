@@ -3,8 +3,10 @@
     export let results;
     export let regionUri;
 
+    // add uri to url
     let url = `https://hdl.handle.net/20.500.11840/${regionUri}`;
 
+    // return all items with where url is the same
     $: resultsByRegion = results.filter( item => {
         return item.place.value === url;
     })

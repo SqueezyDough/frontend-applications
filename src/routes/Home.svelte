@@ -13,14 +13,15 @@
         return region;
     });
 
-    // https://ilikekillnerds.com/2016/05/removing-duplicate-objects-array-property-name-javascript/
+    // remove duplicate regions from objects
+    $: regions = removeDuplicates(objects, "uri")
+
+    // Source: https://ilikekillnerds.com/2016/05/removing-duplicate-objects-array-property-name-javascript/
     function removeDuplicates(array, prop) {
         return array.filter((obj, pos, arr) => {
             return arr.map(mapObj => mapObj[prop]).indexOf(obj[prop]) === pos;
         });
     }
-
-    $: regions = removeDuplicates(objects, "uri")
 </script>
 
 <style lang="scss">

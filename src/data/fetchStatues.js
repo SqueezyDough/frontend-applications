@@ -24,6 +24,8 @@ export default function() {
   LIMIT 200
   `
 
+// modified from lauren's example
+// return json from query
 function runQuery(url, query){
       return fetch(url+"?query="+ encodeURIComponent(query) +"&format=json")
         .then(res => res.json())

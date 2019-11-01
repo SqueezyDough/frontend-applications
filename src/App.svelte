@@ -9,15 +9,17 @@
   let results = [];
 
   onMount( async () => {
+      // fetch all data
     let rawData = await fetchData();
 
+    // all paths thhat give no image
     let filterNoImage = [
       "http://collectie.wereldculturen.nl/cc/imageproxy.ashx?server=localhost&port=17581&filename=images/Images/TM//tm-3317-1.jpg",
       "http://collectie.wereldculturen.nl/cc/imageproxy.ashx?server=localhost&port=17581&filename=images/Images/TM//tm-343-1b.jpg",
       "http://collectie.wereldculturen.nl/cc/imageproxy.ashx?server=localhost&port=17581&filename=images/Images/WM//002741.jpg"
     ]
 
-    // only show data with actual names
+    // only show data with actual names and images
     results = rawData.filter( item => {
       return item.title.value
       !== "Godenbeeld" &&
