@@ -1892,11 +1892,12 @@ var app = (function () {
     			h1 = element("h1");
     			t1 = text(t1_value);
     			attr_dev(img, "class", "card__image svelte-oo58s6");
+    			attr_dev(img, "height", "200px");
     			attr_dev(img, "src", img_src_value = ctx.data.image.value);
     			attr_dev(img, "alt", img_alt_value = ctx.data.title.value);
     			add_location(img, file$2, 72, 4, 1446);
     			attr_dev(h1, "class", "card__title svelte-oo58s6");
-    			add_location(h1, file$2, 73, 4, 1522);
+    			add_location(h1, file$2, 73, 4, 1537);
     			attr_dev(div, "class", "card svelte-oo58s6");
     			add_location(div, file$2, 71, 0, 1423);
     		},
@@ -2305,7 +2306,7 @@ var app = (function () {
 
     const file$4 = "src/App.svelte";
 
-    // (37:4) <Route path="/region/:id" let:params>
+    // (34:4) <Route path="/region/:id" let:params>
     function create_default_slot_1(ctx) {
     	var current;
 
@@ -2350,11 +2351,11 @@ var app = (function () {
     			destroy_component(region, detaching);
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_1.name, type: "slot", source: "(37:4) <Route path=\"/region/:id\" let:params>", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_1.name, type: "slot", source: "(34:4) <Route path=\"/region/:id\" let:params>", ctx });
     	return block;
     }
 
-    // (34:0) <Router>
+    // (31:0) <Router>
     function create_default_slot(ctx) {
     	var div, t, current;
 
@@ -2384,7 +2385,7 @@ var app = (function () {
     			route0.$$.fragment.c();
     			t = space();
     			route1.$$.fragment.c();
-    			add_location(div, file$4, 34, 2, 1293);
+    			add_location(div, file$4, 31, 2, 1103);
     		},
 
     		m: function mount(target, anchor) {
@@ -2430,7 +2431,7 @@ var app = (function () {
     			destroy_component(route1);
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot.name, type: "slot", source: "(34:0) <Router>", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot.name, type: "slot", source: "(31:0) <Router>", ctx });
     	return block;
     }
 

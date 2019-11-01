@@ -1,5 +1,5 @@
 <script>
-    import Card from '../components/Card.svelte'
+    import Card from './src/components/Card.svelte'
     export let results;
     export let regionUri;
 

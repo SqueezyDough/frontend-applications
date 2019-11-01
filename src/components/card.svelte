@@ -21,6 +21,6 @@
 </style>
 
 <div class="card">
-    <img class="card__image" src={data.image.value} alt={data.title.value}>
+    <img class="card__image" height="200px" src={data.image.value} alt={data.title.value}>
     <h1 class="card__title">{data.title.value}</h1>
 </div>
