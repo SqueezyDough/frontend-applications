@@ -12,7 +12,7 @@
       // fetch all data
     let rawData = await fetchData();
 
-    // all paths thhat give no image
+    // all paths that give no image
     let filterNoImage = [
       "http://collectie.wereldculturen.nl/cc/imageproxy.ashx?server=localhost&port=17581&filename=images/Images/TM//tm-3317-1.jpg",
       "http://collectie.wereldculturen.nl/cc/imageproxy.ashx?server=localhost&port=17581&filename=images/Images/TM//tm-343-1b.jpg",

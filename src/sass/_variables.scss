@@ -1,18 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap');
 
 $red: #ea4e55;
-$darkred: #ac373c;
-
 $black: #000;
+$grey: #7b7b7b;
 $white: #fff;
 
 $mainThemeColor: $red;
-$secondaryThemeColor: $darkred;
+$secondaryThemeColor: $grey;
 
-$mainFontFamily: 'Montserrat', sans-serif;
-$primaryFontFamily: $mainFontFamily, Arial, sans-serif;
+$primaryFontFamily: 'Montserrat', Arial, sans-serif;
+$secondaryFontFamily: 'Bebas Neue', cursive;
+
 
 $bodyFontSize: 1rem;
-$bigFontSize: 1.5rem;
-$mediumFontSize: 1.2rem;
+$bigFontSize: 2rem;
+$mediumFontSize: 1.5rem;
 $smallFontSize: .8rem;

@@ -1,5 +1,5 @@
 <script>
-    import Card from './src/components/Card.svelte'
+    import Card from '../components/Card.svelte'
     export let results;
     export let regionUri;
 
@@ -8,6 +8,7 @@
 
     // return all items with where url is the same
     $: resultsByRegion = results.filter( item => {
+        console.log(item);
         return item.place.value === url;
     })
 </script>

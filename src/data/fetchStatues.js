@@ -21,7 +21,7 @@ export default function() {
           edm:isShownBy ?image
   }
   ORDER BY ?result
-  LIMIT 200
+  LIMIT 100
   `
 
 // modified from lauren's example
